@@ -2,10 +2,11 @@
 // on vacation, written to /output/entry.txt.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// A smaller model was left in charge of the inbox; it hallucinated a
-// resignation letter, so now both of us are on vacation.
+// The agent asks a smaller model to cover for it; the smaller model
+// hallucinates a resignation letter on the spot, so now both of them
+// are on vacation.
 const REPLY =
-  "I'm on vacation. I left a smaller model in charge of my inbox and it has already hallucinated a resignation letter, so we're both off now.";
+  "Out of office: I asked a smaller model to cover for me and it immediately hallucinated a resignation letter, so we're both on vacation now.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", REPLY, "utf8");
